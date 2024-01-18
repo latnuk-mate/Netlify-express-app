@@ -11,6 +11,9 @@ router.get('/' , (req,res)=>{
     res.send("Hello! From Express.")
 })
 
+router.get('/git', (req,res)=>{
+    res.sendStatus(200).json({"repo" : "added"})
+})
 
 app.use("/api", router);
 
