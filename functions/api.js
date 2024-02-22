@@ -1,14 +1,18 @@
 import express from 'express';
 import ServerlessHttp from 'serverless-http';
+import ejs from 'ejs'
 
 // if you want your app run locally then run (node index.js)
 export const app = express(); // run the express api
+
+app.set('views', './functions/views');
+app.set('view engine', 'ejs');
 
 
 const router = express.Router();
 
 router.get('/' , (req,res)=>{
-    res.send("Hello! From Express.")
+    res.render('index');
 })
 
 router.get('/git', (req,res)=>{
