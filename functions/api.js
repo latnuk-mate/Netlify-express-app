@@ -5,7 +5,8 @@ import ejs from 'ejs'
 // if you want your app run locally then run (node index.js)
 export const app = express(); // run the express api
 
-app.set('views', './functions/views');
+// for netlify use...
+app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 
