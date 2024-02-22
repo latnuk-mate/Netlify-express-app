@@ -1,6 +1,9 @@
 [build]
 functions = "functions"
 
+[functions]
+  included_files = ["views/**"]
+
 [[redirects]]
   force = true
   from = "/api/*"
