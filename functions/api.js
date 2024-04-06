@@ -1,6 +1,7 @@
 import express from 'express';
 import ServerlessHttp from 'serverless-http';
 import ejs from 'ejs'
+import Path from 'path'
 
 // if you want your app run locally then run (node index.js)
 export const app = express(); // run the express api
