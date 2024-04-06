@@ -2,7 +2,7 @@ import express from 'express';
 import ServerlessHttp from 'serverless-http';
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const filePath = dirname(fileURLToPath(import.meta.url))
 
 
 // if you want your app run locally then run (node index.js)
@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 const router = express.Router();
 
 // for rendering static files here...
-router.use('/static' , express.static(__dirname + "/public"))
+router.use('/static' , express.static(filePath + "/public"))
 
 router.get('/' , (req,res)=>{
     res.render('index');
