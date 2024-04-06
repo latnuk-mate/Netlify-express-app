@@ -2,7 +2,7 @@
 functions = "functions"
 
 [functions]
-  included_files = ["views/**"]
+  included_files = ["views/**" , "public/**"]
 
 [[redirects]]
   force = true

@@ -20,6 +20,8 @@ router.get('/git', (req,res)=>{
     res.json({"repo" : "added"})
 })
 
+router.use('/public', express.static(Path.join(__dirname, 'public')))
+
 app.use("/api", router);
 
 export const handler = ServerlessHttp(app);
